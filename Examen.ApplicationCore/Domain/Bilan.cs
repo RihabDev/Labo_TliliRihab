@@ -18,6 +18,9 @@ namespace Examen.ApplicationCore.Domain
         // Navigation properties
         public virtual Infirmier Infirmier { get; set; }
         public virtual Patient Patient { get; set; }
-        public virtual Analyse Analyse { get; set; }
-    }
+        public ICollection<Analyse> Analyses { get; set; }
+
+        public int InfirmierId { get; set; }
+    
+}
 }

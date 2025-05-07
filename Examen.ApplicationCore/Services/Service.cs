@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Examen.ApplicationCore.Services
 {
-    public class Service<T>: IService<T> where T:class 
+    public class Service<T> : IService<T> where T : class
     {
         private IGenericRepository<T> repository;
         private IUnitOfWork unitOfWork;
@@ -37,7 +37,7 @@ namespace Examen.ApplicationCore.Services
         {
             return repository.GetById(keyValues);
         }
-        
+
         public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> filter = null)
         {
             return repository.GetMany(filter);
